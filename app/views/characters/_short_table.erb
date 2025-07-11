@@ -1,0 +1,30 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Class level</th>
+    <th>Experience</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% characters.each do |character| %>
+    <tr>
+      <td><%= character.name %></td>
+      <td><%= character.class_string %></td>
+      <td>
+        <label for="xp_progress_<%= character.id %>">
+          <%= format_number character.xp %>
+          /
+          <%= format_number character.xp_to_next_level %>
+        </label>
+        <progress id="xp_progress_<%= character.id %>" title="<%= number_to_percentage character.level_progress, precision: 2 %>" max="100" value="<%= character.level_progress %>">
+          (<%= number_to_percentage character.level_progress, precision: 2 %>)
+        </progress>
+      </td>
+      <td><%= link_to "Details", character %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

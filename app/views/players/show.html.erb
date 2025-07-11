@@ -1,0 +1,14 @@
+<% cache @player do %>
+  <div style="display: flex; justify-content: space-between; gap: 1em">
+    <h1>Player <%= @player.full_name %></h1>
+    <%= button_to "Delete", @player, method: :delete, data: { turbo_confirm: "Do you want to delete the player “#{@player.full_name}”?" } if authenticated? %>
+  </div>
+
+  <hr>
+
+  <p>
+    This player's account is
+    <%= link_to @player.account.username, @player.account %>, and is reachable at
+    <%= mail_to @player.email_address %>.
+  </p>
+<% end %>

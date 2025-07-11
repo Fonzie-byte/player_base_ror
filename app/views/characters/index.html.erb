@@ -1,0 +1,35 @@
+<h1>Character overview</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Class</th>
+    <th>Level</th>
+    <th>Experience</th>
+    <th>To next level</th>
+    <th>Progress</th>
+    <th>Creation date</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @characters.each do |character| %>
+    <tr>
+      <td><%= character.name %></td>
+      <td><%= character.class_name %></td>
+      <td><%= character.level %></td>
+      <td><%= format_number character.xp %></td>
+      <td><%= format_number character.xp_to_next_level %></td>
+      <td>
+        <progress id="xp_progress_<%= character.id %>" title="<%= number_to_percentage character.level_progress, precision: 2 %>" max="100" value="<%= character.level_progress %>">
+          (<%= number_to_percentage character.level_progress, precision: 2 %>)
+        </progress>
+      </td>
+      <td><%= format_date character.created_at %></td>
+      <td><%= link_to "Details", character %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

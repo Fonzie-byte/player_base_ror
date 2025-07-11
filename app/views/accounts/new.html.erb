@@ -1,0 +1,21 @@
+<h1>New account</h1>
+
+<%= form_with model: @account do |form| %>
+  <table class="borderless">
+    <tr>
+      <td><%= form.label :username %></td>
+      <td><%= form.text_field :username %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :password %></td>
+      <td><%= form.password_field :password %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :password_confirmation %></td>
+      <td><%= form.password_field :password_confirmation %></td>
+    </tr>
+    <tr>
+      <td colspan="100%"><%= form.submit %></td>
+    </tr>
+  </table>
+<% end %>

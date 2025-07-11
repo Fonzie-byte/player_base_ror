@@ -1,0 +1,31 @@
+<% cache @clan do %>
+  <div style="display: flex; justify-content: space-between; gap: 1em">
+    <h1>Clan <%= @clan.name %></h1>
+    <%= button_to "Delete", @clan, method: :delete, data: { turbo_confirm: "Do you want to delete the clan “#{@clan.name}”?" } if authenticated? %>
+  </div>
+
+  <hr>
+
+  <p>This clan was created by the account <%= link_to @clan.account.username, @clan.account %>.</p>
+
+  <hr>
+
+  <h2>Members</h2>
+
+  <h3>Facts</h3>
+
+  <ul>
+    <li>This clan has <%= @clan.characters.size %> members.</li>
+    <li>
+      They total level <%= @total_level %>.
+      <ul>
+        <li>This means that the average level is <%= format_number @average_level %>.</li>
+        <li>The median level is <%= @median_level %>.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>List</h3>
+
+  <%= render "characters/short_table", characters: @clan.characters %>
+<% end %>

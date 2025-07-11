@@ -1,0 +1,3 @@
+<h1>Account overview</h1>
+
+<%= render "shared/table", headers: %w[username join_date], rows: @accounts, props: %w[username created_at] %>

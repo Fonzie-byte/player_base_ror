@@ -1,0 +1,34 @@
+<% props ||= headers %>
+
+<table>
+  <thead>
+  <tr>
+    <% headers.each do |header| %>
+      <th><%= header.humanize %></th>
+    <% end %>
+    <th>Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% rows.each do |row| %>
+    <tr>
+      <% props.each do |prop| %>
+        <td>
+          <%= if row[prop].is_a?(Numeric)
+                format_number(row[prop])
+              elsif row[prop].methods.include?(:strftime)
+                format_date(row[prop])
+              else
+                row[prop]
+              end %>
+        </td>
+      <% end %>
+      <td><%= link_to "Details", row %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td colspan="100%"><%= link_to( "New " + rows[0].class.name, rows[0].class.name.downcase.pluralize + "/new") %></td>
+  </tr>
+  </tbody>
+</table>

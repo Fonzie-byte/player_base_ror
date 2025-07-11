@@ -1,0 +1,42 @@
+<% cache @character do %>
+  <div style="display: flex; justify-content: space-between; gap: 1em">
+    <h1>Character <%= @character.name %></h1>
+    <%= button_to "Delete", @character, method: :delete, data: { turbo_confirm: "Do you want to delete the character “#{@character.name}”?" } if authenticated? %>
+  </div>
+
+  <hr>
+
+  <p>This character belongs to account <%= link_to @character.account.username, @character.account %>.</p>
+
+  <hr>
+
+  <h2>Character information</h2>
+
+  <ul>
+    <li>This character is a <%= @character.class_string %>.</li>
+    <li>
+      This character has <%= format_number @character.xp %> XP, and
+      needs <%= format_number @character.xp_to_next_level %> XP to reach
+      level <%= @character.level + 1 %>.
+      <ul>
+        <li>
+          That means they are
+          <%= number_to_percentage @character.level_progress, precision: 2 %>
+          on the way to the next level.
+        </li>
+      </ul>
+    </li>
+    <% if @character.clans.empty? %>
+      <li>This character is not a member of any clans.</li>
+    <% else %>
+      <li>
+        This character is a member of the following clans:
+        <ul>
+          <% @character.clans.each do |clan| %>
+            <li><%= link_to clan.name, clan %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
