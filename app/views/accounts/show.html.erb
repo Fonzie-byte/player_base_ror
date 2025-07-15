@@ -17,18 +17,4 @@
   <h2>Characters</h2>
 
   <%= render "characters/short_table", characters: @account.characters %>
-
-  <hr>
-
-  <h2>Clans</h2>
-
-  <% if @account.clans.empty? %>
-    This account has not made any clans.
-  <% else %>
-    <ul>
-      <% @account.clans.each do |clan| %>
-        <li><%= link_to clan.name, clan %></li>
-      <% end %>
-    </ul>
-  <% end %>
 <% end %>
