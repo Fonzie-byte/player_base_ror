@@ -1,0 +1,57 @@
+tok:
+  number:
+    nth:
+      ordinalized: "󱤽%{number}"
+  activerecord:
+    models:
+      account: 󱤪󱦖󱤑
+      player: 󱤑󱦖󱤻
+      character: 󱤑
+      clan: 󱤟
+    employee: 󱤑󱦖󱤤
+    attributes:
+      account:
+        username: 󱥂󱦖󱤖
+        # Can these go on *any* model?
+        password: 󱥂󱦖󱤥
+        password_confirmation: 󱥄󱥌󱤈󱤉󱥂󱦖󱤥
+        created_at: 󱥫󱥉
+        updated_at: 󱥫󱤆
+      player:
+        first_name: 󱥂󱦖󱥳
+        last_name: 󱥂󱦖󱥐
+        full_name: 󱥂
+        email_address: 󱥂󱥍󱤖󱤓󱤉󱤪
+        created_at: 󱥫󱥉
+        updated_at: 󱥫󱤆
+      character:
+        name: 󱥂
+        class_name: "󱤑󱥍(󱤟󱥙)"
+        class_string: "󱤑󱥍(󱤟󱥙)"
+        level: 󱤽󱥵
+        xp: 󱤽󱥡
+        created_at: 󱥫󱥉
+        updated_at: 󱥫󱤆
+      clan:
+        name: 󱥂
+        created_at: 󱥫󱥉
+        updated_at: 󱥫󱤆
+  class:
+    warrior: 󱤑󱥱
+    rogue: 󱤑󱤥
+    mage: "󱤑󱥍(󱥵󱦕󱤾)"
+    priest: "󱤑󱥍(󱥵󱦕󱥚)"
+  overview: "%{model}󱤄"
+  log_in: 󱥄󱤖
+  log_out: 󱥄󱥩
+  model_table_component:
+    actions: 󱥉
+    details: 󱥄󱤮
+  model:
+    new: "%{model}󱥝"
+    create: "󱥄󱥉󱤉%{model}"
+  accounts:
+    show:
+      title: "󱤪󱦖󱤑󱦐%{name}󱦑"
+      delete_confirm: "󱥞󱥷󱤂󱥷󱥶󱤉󱤪󱦖󱤑󱦐%{username}󱦑"
+  delete: "󱥄󱥶"

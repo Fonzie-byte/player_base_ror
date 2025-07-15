@@ -20,7 +20,7 @@ html {
 body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif, 'Fairfax HD', 'Fairfax Pona HD', 'nasin-nanpa', 'nasin nanpa', 'linja-pona', 'linja pona', 'sitelen seli kiwen';
     line-height: 1.5;
     padding: 2em;
 }
@@ -104,7 +104,7 @@ table {
 }
 
 code, pre {
-    font-family: monospace;
+    font-family: monospace, 'nasin-nanpa', 'nasin nanpa';
     font-size: 10pt;
     line-height: 1.2;
     background-color: var(--color-shade);

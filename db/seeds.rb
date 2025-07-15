@@ -24,7 +24,7 @@ Employee.create(
 puts "Admin account created, password: #{admin_pass}"
 
 Faker::Config.locale = :nl
-classes = %w[Warrior Rogue Mage Priest]
+classes = %w[warrior rogue mage priest]
 
 10.times do
   Clan.create(

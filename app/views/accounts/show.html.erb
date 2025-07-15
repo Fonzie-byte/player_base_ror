@@ -1,7 +1,7 @@
 <% cache @account do %>
   <div style="display: flex; justify-content: space-between">
-    <h1>Account <%= @account.username %></h1>
-    <%= button_to "Delete", @account, method: :delete, data: { turbo_confirm: "Do you want to delete the account “#{@account.username}”?" } if authenticated? %>
+    <h1><%= t(".title", name: @account.username) %></h1>
+    <%= button_to t("delete"), @account, method: :delete, data: { turbo_confirm: t(".delete_confirm", username: @account.username) } if authenticated? %>
   </div>
 
   <hr>
@@ -14,7 +14,7 @@
 
   <hr>
 
-  <h2>Characters</h2>
+  <h2><%= Character.model_name.human(count: 0) %></h2>
 
   <%= render "characters/short_table", characters: @account.characters %>
 <% end %>

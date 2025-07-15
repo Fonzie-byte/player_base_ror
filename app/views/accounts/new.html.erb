@@ -1,4 +1,4 @@
-<h1>New account</h1>
+<h1><%= t("model.new", model: Account.model_name.human) %></h1>
 
 <%= form_with model: @account do |form| %>
   <table class="borderless">
@@ -15,7 +15,7 @@
       <td><%= form.password_field :password_confirmation %></td>
     </tr>
     <tr>
-      <td colspan="100%"><%= form.submit %></td>
+      <td colspan="100%"><%= form.submit t("model.create", model: Account.model_name.human) %></td>
     </tr>
   </table>
 <% end %>

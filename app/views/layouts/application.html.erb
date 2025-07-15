@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= cookies[:lang] || "en" %>">
 <head>
   <title><%= content_for(:title) || "Player Base" %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,17 +25,19 @@
 
 <body>
 
-<nav>
+<nav style="display: flex; justify-content: space-between;">
   <ul>
-    <li><%= link_to "Accounts", accounts_path %></li>
-    <li><%= link_to "Players", players_path %></li>
-    <li><%= link_to "Characters", characters_path %></li>
-    <li><%= link_to "Clans", clans_path %></li>
+    <li><%= link_to Account.model_name.human(count: 0), accounts_path %></li>
+    <li><%= link_to Player.model_name.human(count: 0), players_path %></li>
+    <li><%= link_to Character.model_name.human(count: 0), characters_path %></li>
+    <li><%= link_to Clan.model_name.human(count: 0), clans_path %></li>
     <li>
-      <%= link_to "Log in", new_session_path unless authenticated? %>
-      <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+      <%= link_to t("log_in"), new_session_path unless authenticated? %>
+      <%= button_to t("log_out"), session_path, method: :delete if authenticated? %>
     </li>
   </ul>
+  <%= link_to "English", "?lang=en" if cookies[:lang]!="en" %>
+  <%= link_to "󱥬󱦖󱥔", "?lang=tok" if cookies[:lang]!="tok" %>
 </nav>
 
 <%= tag.div(flash[:alert], class: "alert") if flash[:alert] %>

@@ -2,6 +2,13 @@ class Character < ApplicationRecord
   belongs_to :account
   has_and_belongs_to_many :clans
 
+  enum :class_name, {
+    warrior: "Warrior",
+    rogue: "Rogue",
+    mage: "Mage",
+    priest: "Priest"
+  }
+
   def class_string
     "#{level.ordinalize} level #{class_name}"
   end
