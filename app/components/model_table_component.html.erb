@@ -18,7 +18,7 @@
               elsif row[prop].methods.include?(:strftime)
                 row[prop].strftime("%Y, %b %-d")
               else
-                row[prop]
+                row.send(prop)
               end %>
         </td>
       <% end %>

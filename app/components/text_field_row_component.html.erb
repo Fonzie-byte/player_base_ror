@@ -1,0 +1,7 @@
+<tr>
+  <td><%= @form.label @prop %></td>
+  <td>
+    <%= @form.text_field @prop %>
+    <%= render ValidationErrorComponent.new(@model.errors[@prop]) %>
+  </td>
+</tr>

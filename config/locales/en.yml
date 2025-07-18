@@ -46,21 +46,17 @@ en:
         one: Employee
         other: Employees
     attributes:
-      account:
-        # Could this go on *any* model?
-        password_confirmation: Confirm password
-        created_at: Joined on
       player:
-        # Could this go on *any* model?
-        email_address: E-mail address
+        account_id: Account
       character:
         class_name: Class
         class_string: Class
         level: Lv.
         xp: XP
-      employee:
-        email_address: E-mail address
-        password_confirmation: Confirm password
+  attributes:
+    email_address: E-mail address
+    password_confirmation: Confirm password
+    created_at: Joined on
   class:
     warrior: Warrior
     rogue: Rogue
@@ -79,4 +75,13 @@ en:
     show:
       title: "Account %{name}"
       delete_confirm: "Do you want to delete the account %{username}?"
+    create:
+      created: "Account was successfully created."
+    destroy:
+      destroyed: "Account was successfully deleted."
+  players:
+    create:
+      created: "Player was successfully created."
+    destroy:
+      destroyed: "Player was successfully deleted."
   delete: "Delete"

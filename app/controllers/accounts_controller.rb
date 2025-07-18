@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   allow_unauthenticated_access only: %i[ index show ]
-  before_action :set_account, only: [ :show, :destroy ]
+  before_action :set_account, only: %i[ show destroy ]
 
   def index
     @accounts = Account.all
@@ -13,14 +13,28 @@ class AccountsController < ApplicationController
     @account = Account.new
   end
 
+  def create
+    @account = Account.new(account_params)
+
+    if @account.save
+      render :show, account: @account, status: :created, notice: t(".created")
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @account.destroy
-    redirect_to accounts_url, notice: "Account was successfully deleted."
+    redirect_to accounts_url, notice: t(".destroyed")
   end
 
   private
 
   def set_account
     @account = Account.find(params[:id])
+  end
+
+  def account_params
+    params.expect(account: %i[username password password_confirmation])
   end
 end

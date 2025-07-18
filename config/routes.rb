@@ -9,11 +9,10 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  # Todo: These, and delete, should be behind authentication
-  resources :accounts, except: [ :edit, :update ]
-  resources :players, except: [ :create, :new, :edit, :update ]
-  resources :characters, except: [ :create, :new, :edit, :update ]
-  resources :clans, except: [ :create, :new, :edit, :update ]
+  resources :accounts, except: %i[ edit update ]
+  resources :players, except: %i[ edit update ]
+  resources :characters, except: %i[ create new edit update ]
+  resources :clans, except: %i[ create new edit update ]
 
   # Defines the root path route ("/")
   root "accounts#index"

@@ -1,6 +1,6 @@
 class ClansController < ApplicationController
   allow_unauthenticated_access only: %i[ index show ]
-  before_action :set_clan, only: [ :show, :destroy ]
+  before_action :set_clan, only: %i[ show destroy ]
 
   def index
     @clans = Clan.all

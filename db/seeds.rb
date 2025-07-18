@@ -1,27 +1,9 @@
 require "faker"
 
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-admin_pass = Faker::Internet.password(
-  min_length: 20,
-  max_length: 64,
-  mix_case: true,
-  special_characters: true,
-)
 Employee.create(
   email_address: "admin@example.org",
-  password: admin_pass,
-  password_confirmation: admin_pass,
+  password_digest: "$2a$12$6aPNhsyGxYsdxgUYginQCuyRK6.DXgBr.lGxd3SOmKyr1NcNFBD7q",
 )
-puts "Admin account created, password: #{admin_pass}"
 
 Faker::Config.locale = :nl
 classes = %w[warrior rogue mage priest]

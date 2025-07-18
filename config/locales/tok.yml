@@ -2,6 +2,16 @@ tok:
   number:
     nth:
       ordinalized: "󱤽%{number}"
+  errors:
+    messages:
+      blank: 󱥄󱤬
+      too_short: "󱤧󱤨󱤀 (󱥄󱥌󱤉󱥠%{count})"
+      taken: 󱤧󱤬 (󱥄󱥌󱤉󱥂󱥍󱦗󱤬󱤂󱦘)
+    attributes:
+      email_address:
+        invalid: "󱥄󱤓󱤉「󱥠@󱥠.󱥠」"
+      password_confirmation:
+        confirmation: 󱥄󱥌󱤉󱥂󱦖󱤥󱥖
   activerecord:
     models:
       account: 󱤪󱦖󱤑
@@ -12,35 +22,28 @@ tok:
     attributes:
       account:
         username: 󱥂󱦖󱤖
-        # Can these go on *any* model?
-        password: 󱥂󱦖󱤥
-        password_confirmation: 󱥄󱥌󱤈󱤉󱥂󱦖󱤥
-        created_at: 󱥫󱥉
-        updated_at: 󱥫󱤆
       player:
+        account_id: 󱤪󱦖󱤑
         first_name: 󱥂󱦖󱥳
         last_name: 󱥂󱦖󱥐
         full_name: 󱥂
-        email_address: 󱥂󱥍󱤖󱤓󱤉󱤪
-        created_at: 󱥫󱥉
-        updated_at: 󱥫󱤆
       character:
-        name: 󱥂
-        class_name: "󱤑󱥍(󱤟󱥙)"
-        class_string: "󱤑󱥍(󱤟󱥙)"
+        class_name: 󱤑󱥍󱦗󱤟󱥙󱦘
+        class_string: 󱤑󱥍󱦗󱤟󱥙󱦘
         level: 󱤽󱥵
         xp: 󱤽󱥡
-        created_at: 󱥫󱥉
-        updated_at: 󱥫󱤆
-      clan:
-        name: 󱥂
-        created_at: 󱥫󱥉
-        updated_at: 󱥫󱤆
+  attributes:
+    name: 󱥂
+    email_address: 󱥂󱥍󱦗󱤖󱤓󱤉󱤪󱦘
+    password: 󱥂󱦖󱤥
+    password_confirmation: 󱥄󱥌󱤉󱥂󱦖󱤥󱥖
+    created_at: 󱥫󱥉
+    updated_at: 󱥫󱤆
   class:
     warrior: 󱤑󱥱
     rogue: 󱤑󱤥
-    mage: "󱤑󱥍(󱥵󱦕󱤾)"
-    priest: "󱤑󱥍(󱥵󱦕󱥚)"
+    mage: 󱤑󱥍󱦗󱥵󱦕󱤾󱦘
+    priest: 󱤑󱥍󱦗󱥵󱦕󱥚󱦘
   overview: "%{model}󱤄"
   log_in: 󱥄󱤖
   log_out: 󱥄󱥩
@@ -54,4 +57,13 @@ tok:
     show:
       title: "󱤪󱦖󱤑󱦐%{name}󱦑"
       delete_confirm: "󱥞󱥷󱤂󱥷󱥶󱤉󱤪󱦖󱤑󱦐%{username}󱦑"
+    create:
+      created: "󱥞󱥉󱦕󱥔󱤉󱤪󱦖󱤑"
+    destroy:
+      destroyed: "󱥞󱥶󱦕󱥔󱤉󱤪󱦖󱤑"
+  players:
+    create:
+      created: "󱥞󱥉󱦕󱥔󱤉󱤑󱦖󱤻"
+    destroy:
+      destroyed: "󱥞󱥶󱦕󱥔󱤉󱤑󱦖󱤻"
   delete: "󱥄󱥶"

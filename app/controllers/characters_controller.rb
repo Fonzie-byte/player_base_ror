@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
   allow_unauthenticated_access only: %i[ index show ]
-  before_action :set_character, only: [ :show, :destroy ]
+  before_action :set_character, only: %i[ show destroy ]
 
   def index
     @characters = Character.all

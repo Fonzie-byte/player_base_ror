@@ -1,0 +1,21 @@
+<h1><%= t("model.new", model: Player.model_name.human) %></h1>
+
+<%= form_with model: @player do |form| %>
+  <table class="borderless">
+    <tr>
+      <td><%= form.label :account_id %></td>
+      <td>
+        <%= form.select :account_id, Account::dropdown_values %>
+        <%= render ValidationErrorComponent.new(@player.errors[:account_id]) %>
+      </td>
+    </tr>
+
+    <%= render TextFieldRowComponent.new(form:, model: @player, prop: :first_name) %>
+    <%= render TextFieldRowComponent.new(form:, model: @player, prop: :last_name) %>
+    <%= render EmailFieldRowComponent.new(form:, model: @player, prop: :email_address) %>
+
+    <tr>
+      <td colspan="100%"><%= form.submit t("model.create", model: Player.model_name.human) %></td>
+    </tr>
+  </table>
+<% end %>
