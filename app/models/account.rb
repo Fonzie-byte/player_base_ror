@@ -8,6 +8,6 @@ class Account < ApplicationRecord
   validates :password, presence: true, length: { minimum: 15 }
 
   def self.dropdown_values
-    self.all.order(:username).map { |a| [a.username, a.id] }
+    self.all.order(:username).map { |a| [ a.username, a.id ] }
   end
 end

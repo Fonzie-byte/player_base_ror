@@ -6,7 +6,7 @@ class Character < ApplicationRecord
     warrior: "Warrior",
     rogue: "Rogue",
     mage: "Mage",
-    priest: "Priest"
+    priest: "Priest",
   }
 
   def class_string
