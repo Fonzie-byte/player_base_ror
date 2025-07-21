@@ -28,5 +28,29 @@
     - [ ] Moderate their own Characters
     - [ ] Moderate their own Clans
 
+# Translations
+- [x] Model names
+  - [x] Account
+  - [x] Player
+  - [x] Character
+  - [x] Clan
+- [x] Attributes
+  - [x] common
+    - [x] Name
+    - [x] E-mail
+    - [x] Password
+    - [x] Created at
+    - [x] Updated at
+  - [x] Account
+    - [x] Username
+  - [x] Player
+    - [x] First name
+    - [x] Last name
+  - [x] Character
+    - [x] Class
+      - [ ] Class names
+    - [x] Level
+    - [x] Experience
+
 # JSON API?
 ?

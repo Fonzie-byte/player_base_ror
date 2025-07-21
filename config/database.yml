@@ -1,7 +1,7 @@
 # SQLite. Versions 3.8.0 and up are supported.
 #   gem install pg
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   Ensure the Postgres 3 gem is defined in your Gemfile
 #   gem "pg", "~> x.y"
 #
 default: &default

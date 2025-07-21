@@ -63,3 +63,4 @@ end
 gem "faker", "~> 3.5"
 gem "pg", "~> 1.5"
 gem "view_component", "~> 3.23"
+gem "pwned", "~> 2.4"

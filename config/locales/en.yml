@@ -28,46 +28,49 @@
 #       enabled: "ON"
 
 en:
+  errors:
+    messages:
+      not_pwned: "has already been stolen, please use a different password"
   activerecord:
     models:
       account:
-        one: Account
-        other: Accounts
+        one: "Account"
+        other: "Accounts"
       player:
-        one: Player
-        other: Players
+        one: "Player"
+        other: "Players"
       character:
-        one: Character
-        other: Characters
+        one: "Character"
+        other: "Characters"
       clan:
-        one: Clan
-        other: Clans
+        one: "Clan"
+        other: "Clans"
       employee:
-        one: Employee
-        other: Employees
+        one: "Employee"
+        other: "Employees"
     attributes:
       player:
-        account_id: Account
+        account_id: "Account"
       character:
-        class_name: Class
-        class_string: Class
-        level: Lv.
-        xp: XP
+        class_name: "Class"
+        class_string: "Class"
+        level: "Lv."
+        xp: "XP"
   attributes:
-    email_address: E-mail address
-    password_confirmation: Confirm password
-    created_at: Joined on
+    email_address: "E-mail address"
+    password_confirmation: "Confirm password"
+    created_at: "Joined on"
   class:
-    warrior: Warrior
-    rogue: Rogue
-    mage: Mage
-    priest: Priest
+    warrior: "Warrior"
+    rogue: "Rogue"
+    mage: "Mage"
+    priest: "Priest"
   overview: "%{model} overview"
-  log_in: Log in
-  log_out: Log out
+  log_in: "Log in"
+  log_out: "Log out"
   model_table_component:
-    actions: Actions
-    details: Details
+    actions: "Actions"
+    details: "Details"
   model:
     new: "New %{model}"
     create: "Create %{model}"

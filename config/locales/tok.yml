@@ -6,50 +6,51 @@ tok:
     messages:
       blank: 󱥄󱤬
       too_short: "󱤧󱤨󱤀 (󱥄󱥌󱤉󱥠%{count})"
-      taken: 󱤧󱤬 (󱥄󱥌󱤉󱥂󱥍󱦗󱤬󱤂󱦘)
+      taken: "󱤧󱤬 (󱥄󱥌󱤉󱥂󱥍󱦗󱤬󱤂󱦘)"
+      not_pwned: "󱤧󱤬󱤑󱦖󱦅󱦜󱥄󱥉󱤉󱥂󱦖󱤥󱥝"
     attributes:
       email_address:
         invalid: "󱥄󱤓󱤉「󱥠@󱥠.󱥠」"
       password_confirmation:
-        confirmation: 󱥄󱥌󱤉󱥂󱦖󱤥󱥖
+        confirmation: "󱥄󱥌󱤉󱥂󱦖󱤥󱥖"
   activerecord:
     models:
-      account: 󱤪󱦖󱤑
-      player: 󱤑󱦖󱤻
-      character: 󱤑
-      clan: 󱤟
-    employee: 󱤑󱦖󱤤
+      account: "󱤪󱦖󱤑"
+      player: "󱤑󱦖󱤻"
+      character: "󱤑"
+      clan: "󱤟"
+    employee: "󱤑󱦖󱤤"
     attributes:
       account:
-        username: 󱥂󱦖󱤖
+        username: "󱥂󱦖󱤖"
       player:
-        account_id: 󱤪󱦖󱤑
-        first_name: 󱥂󱦖󱥳
-        last_name: 󱥂󱦖󱥐
-        full_name: 󱥂
+        account_id: "󱤪󱦖󱤑"
+        first_name: "󱥂󱦖󱥳"
+        last_name: "󱥂󱦖󱥐"
+        full_name: "󱥂"
       character:
-        class_name: 󱤑󱥍󱦗󱤟󱥙󱦘
-        class_string: 󱤑󱥍󱦗󱤟󱥙󱦘
-        level: 󱤽󱥵
-        xp: 󱤽󱥡
+        class_name: "󱤑󱥍󱦗󱤟󱥙󱦘"
+        class_string: "󱤑󱥍󱦗󱤟󱥙󱦘"
+        level: "󱤽󱥵"
+        xp: "󱤽󱥡"
   attributes:
-    name: 󱥂
-    email_address: 󱥂󱥍󱦗󱤖󱤓󱤉󱤪󱦘
-    password: 󱥂󱦖󱤥
-    password_confirmation: 󱥄󱥌󱤉󱥂󱦖󱤥󱥖
-    created_at: 󱥫󱥉
-    updated_at: 󱥫󱤆
+    name: "󱥂"
+    email_address: "󱥂󱥍󱦗󱤖󱤓󱤉󱤪󱦘"
+    password: "󱥂󱦖󱤥"
+    password_confirmation: "󱥄󱥌󱤉󱥂󱦖󱤥󱥖"
+    created_at: "󱥫󱥉"
+    updated_at: "󱥫󱤆"
   class:
-    warrior: 󱤑󱥱
-    rogue: 󱤑󱤥
-    mage: 󱤑󱥍󱦗󱥵󱦕󱤾󱦘
-    priest: 󱤑󱥍󱦗󱥵󱦕󱥚󱦘
+    warrior: "󱤑󱥱"
+    rogue: "󱤑󱤥"
+    mage: "󱤑󱥍󱦗󱥵󱦕󱤾󱦘"
+    priest: "󱤑󱥍󱦗󱥵󱦕󱥚󱦘"
   overview: "%{model}󱤄"
-  log_in: 󱥄󱤖
-  log_out: 󱥄󱥩
+  log_in: "󱥄󱤖"
+  log_out: "󱥄󱥩"
   model_table_component:
-    actions: 󱥉
-    details: 󱥄󱤮
+    actions: "󱥉"
+    details: "󱥄󱤮"
   model:
     new: "%{model}󱥝"
     create: "󱥄󱥉󱤉%{model}"
